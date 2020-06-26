@@ -238,6 +238,13 @@ namespace winrt::TerminalApp::implementation
         args.Handled(true);
     }
 
+    void TerminalPage::_HandleToggleCommandPalette(const IInspectable& /*sender*/,
+                                                   const TerminalApp::ActionEventArgs& args)
+    {
+        CommandPalette().ToggleVisibility();
+        args.Handled(true);
+    }
+
     void TerminalPage::_HandleSetTabColor(const IInspectable& /*sender*/,
                                           const TerminalApp::ActionEventArgs& args)
     {
